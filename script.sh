@@ -1,5 +1,5 @@
 #!/bin/bash
-BoxVersion='1.0.2';
+
 
 LBLUE='\e[94m';
 RED='\e[31m';
