@@ -19,7 +19,7 @@
 </head>
 <body>
 <?php
-$box_version = '1.0.0';
+$box_version = '1.0.1';
 $box_name = 'myLocal Box <small>v' . $box_version . '</small>';
 ?>
 <main>
