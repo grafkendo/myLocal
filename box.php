@@ -67,7 +67,7 @@ $box_name = 'myLocal Box <small>v' . $box_version . '</small>'; // WPCS: XSS OK.
                                 <a href="https://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>/" target="_blank">
                                     <strong>front</strong>
                                 </a> |
-                                <a href="http://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>.<?php echo $_SERVER['SERVER_ADDR']; ?>.xip.io/box.php<?php echo $_SERVER['HTTP_HOST']; ?>" target="_blank">
+                                <a href="http://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>.<?php echo $_SERVER['SERVER_ADDR']; // WPCS: XSS OK.?>.xip.io/box.php<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>" target="_blank">
                                     <strong>xip.io</strong>
                                 </a>
                             </td>

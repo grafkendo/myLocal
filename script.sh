@@ -1,13 +1,8 @@
 #!/bin/bash
 
-
-LBLUE='\e[94m';
-RED='\e[31m';
 CYN='\e[96m';
 GRN='\e[92m';
 NC='\e[0m';
-bold=$(tput bold);
-normal=$(tput sgr0); 
 CHK='\xE2\x9C\x94';  
    
 printf "\n\n${CYN}Setting up your environment...${NC}\n";
