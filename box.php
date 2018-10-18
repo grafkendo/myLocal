@@ -19,13 +19,14 @@
 </head>
 <body>
 <?php
-$box_version = '1.0.1'; 
+$box_version = '1.0.1';
+$box_name = 'myLocal Box <small>v' . $box_version . '</small>'; // WPCS: XSS OK.
 ?>
 <main>
 
     <div class="container">
         <header>
-            <h1><?php echo 'myLocal Box <small>v' . esc_html($box_version) . '</small>'; ?></h1>
+            <h1><?php echo $box_name; // WPCS: XSS OK. ?></h1>
             <p> LEMP Stack - WordPress Development <br>
                 <small><em>Linux / NGINX / MySQL / PHP</em></small>
             </p>
@@ -44,12 +45,12 @@ $box_version = '1.0.1';
                     <table class="table table-responsive table-striped table-hover">
                         <tr>
                             <td><strong>VM IP</strong></td>
-                            <td class="table-data"><?php echo esc_html($_SERVER['SERVER_ADDR']); ?></td>
+                            <td class="table-data"><?php echo $_SERVER['SERVER_ADDR']; // WPCS: XSS OK. ?></td>
                             <td><i class="fa fa-check"></i></td>
                         </tr>
                         <tr>
                             <td><strong>myLocal</strong></td>
-                            <td class="table-data">https://<?php echo esc_html($_SERVER['HTTP_HOST']); ?>
+                            <td class="table-data">https://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>
                                 <br>
 
                             </td>
@@ -57,16 +58,16 @@ $box_version = '1.0.1';
                         </tr>
                         <tr><td><strong>Links</strong></td>
                             <td>
-                                <a href="https://<?php echo esc_html($_SERVER['HTTP_HOST']); ?>/info.php" target="_blank">
+                                <a href="https://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>/info.php" target="_blank">
                                     <strong>info</strong>
                                 </a> |
-                                <a href="https://<?php echo esc_html($_SERVER['HTTP_HOST']); ?>/wp-admin/" target="_blank">
+                                <a href="https://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>/wp-admin/" target="_blank">
                                     <strong>dashboard</strong>
                                 </a> |
-                                <a href="https://<?php echo esc_html($_SERVER['HTTP_HOST']); ?>/" target="_blank">
+                                <a href="https://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>/" target="_blank">
                                     <strong>front</strong>
                                 </a> |
-                                <a href="http://<?php echo esc_html($_SERVER['HTTP_HOST']); ?>.<?php echo esc_html($_SERVER['SERVER_ADDR']); ?>.xip.io/box.php<?php echo esc_html($_SERVER['HTTP_HOST']); ?>" target="_blank">
+                                <a href="http://<?php echo $_SERVER['HTTP_HOST']; // WPCS: XSS OK. ?>.<?php echo $_SERVER['SERVER_ADDR']; ?>.xip.io/box.php<?php echo $_SERVER['HTTP_HOST']; ?>" target="_blank">
                                     <strong>xip.io</strong>
                                 </a>
                             </td>
@@ -105,7 +106,7 @@ $box_version = '1.0.1';
                         foreach ($modules as $extension) :
                             ?>
                             <tr>
-                                <td colspan="2"><?php echo esc_html($extension); ?></td>
+                                <td colspan="2"><?php echo $extension; // WPCS: XSS OK. ?></td>
                                 <td><i class="fa fa-check"></i></td>
                             </tr>
                         <?php endforeach; ?>
@@ -163,13 +164,13 @@ $box_version = '1.0.1';
                         <tr>
                             <td><strong>Connected?</strong></td>
                             <td>
-                                <?php echo($memcached_running ? '<i class="fa fa-check"></i>' : '<i class="fa fa-times"></i>'); ?>
+                                <?php echo($memcached_running ? '<i class="fa fa-check"></i>' : '<i class="fa fa-times"></i>'); // WPCS: XSS OK. ?>
                             </td>
                         </tr>
                         <tr>
                             <td><strong>Version</strong></td>
                             <td>
-                                <?php echo($memcached_running ? esc_html($memcached_version) : 'Nope'); ?>
+                                <?php echo($memcached_running ? $memcached_version : 'Nope'); // WPCS: XSS OK. ?>
                             </td>
                         </tr>
                         <tr>
@@ -262,7 +263,7 @@ $box_version = '1.0.1';
                         foreach ($packages as $package) :
                             ?>
                             <tr>
-                                <td colspan="2"><?php echo esc_html($package); ?></td>
+                                <td colspan="2"><?php echo $package; // WPCS: XSS OK. ?></td>
                                 <td><i class="fa fa-check"></i></td>
                             </tr>
                         <?php endforeach; ?>
@@ -359,7 +360,7 @@ $box_version = '1.0.1';
                             ?>
                             <td><strong>Connected?</strong></td>
                             <td>
-                                <?php echo($mysql_running ? '<i class="fa fa-check"></i>' : '<i class="fa fa-times"></i>'); ?>
+                                <?php echo($mysql_running ? '<i class="fa fa-check"></i>' : '<i class="fa fa-times"></i>'); // WPCS: XSS OK. ?>
                             </td>
                         </tr>
                         <tr>
@@ -421,7 +422,7 @@ $box_version = '1.0.1';
                         <tr>
                             <th>
                                 <h3>How to Connect</h3>
-                                <code>>> ssh vagrant@<?php echo esc_html($_SERVER['SERVER_ADDR']); ?> </code>
+                                <code>>> ssh vagrant@<?php echo $_SERVER['SERVER_ADDR']; // WPCS: XSS OK. ?> </code>
                             </th>
                         </tr>
                         <tr>
@@ -434,7 +435,7 @@ $box_version = '1.0.1';
                                     <h4 class="text-center">Or</h4>
                                     <div class="form-group">
                                         <label>SSH Host</label>
-                                        <input type="text" class="form-control" value="127.0.0.1 or <?php echo esc_html($_SERVER['SERVER_ADDR']);?>">
+                                        <input type="text" class="form-control" value="127.0.0.1 or <?php echo $_SERVER['SERVER_ADDR']; // WPCS: XSS OK. ?>">
                                     </div>
                                     <div class="form-group">
                                         <label>SSH User</label>
@@ -466,7 +467,7 @@ $box_version = '1.0.1';
     </div>
 
     <footer>
-        <h3> <?php echo 'myLocal Box <small>v' . esc_html($box_version) . '</small>'; ?></h3>
+        <h3> <?php echo $box_name; // WPCS: XSS OK. ?></h3>
     </footer>
 </main>
 
