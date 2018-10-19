@@ -1,5 +1,9 @@
 ![](https://raw.githubusercontent.com/lloan/myLocal/images/div.png)
-![](https://raw.githubusercontent.com/lloan/myLocal/images/title.png)
+## **myLocal**
+*LEMP Stack - WordPress Development*                             
+*Linux / NGINX / MySQL / PHP*
+
+
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3422a613d7e44942b7da7290a77169dc)](https://www.codacy.com/app/lloanalas/myLocal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lloan/myLocal&amp;utm_campaign=Badge_Grade)
 
