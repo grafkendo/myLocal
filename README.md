@@ -55,7 +55,38 @@ If you find that the download from the Vagrant Cloud is taking too long, you can
 - Navigate to your project directory.
 - Run `vagrant up` 
 
-## **Troubleshooting**
+# **SSL**
+In order to get your local SSL certifcate working, we've included the required certificate for you to add to your local machine or your browser. We have instructions below to get this working on Chrome & Firefox. 
+ 
+## **Chrome**
+On chrome you might get an error like this: 
+
+![Chrome SSL Error](https://raw.githubusercontent.com/lloan/myLocal/images/not-secure-chrome.png)
+
+### **Install**
+
+- Open your Chrome browser settings.
+- Scroll down and click on Advanced.
+- Find the Privacy and Security settings.
+- Open the Manage Certificates settings.
+- Select the Trusted Root Certifications tab.
+- Click on Import.
+- On the new prompt, click next.
+- It will then ask you to locate the file you want to use, click on Browse.
+- Find the directory where you're storing the ledkybCA.pem file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
+- Select ledkybCA.pem and click next.
+- Click on **Place all certificates** in the follow store and choose **Trusted Root Certification Authorities**
+- Click on next and finish
+- You will get a Security Warning 
+
+
+## **Firefox** 
+On Firefox you might get an error like this: 
+![Firefox SSL Error](https://raw.githubusercontent.com/lloan/myLocal/images/not-secure-firefox.png)
+
+
+ 
+# **Troubleshooting**
 
 If you're having problems after running `vagrant up` trying provisioning your box again. To do so, you can run the following command: `vagrant up --provision` and it will try loading everything again.
 
