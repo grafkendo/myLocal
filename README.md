@@ -1,4 +1,6 @@
-# **myLocal**
+![](https://raw.githubusercontent.com/lloan/myLocal/images/div.png)
+![](https://raw.githubusercontent.com/lloan/myLocal/images/title.png)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3422a613d7e44942b7da7290a77169dc)](https://www.codacy.com/app/lloanalas/myLocal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lloan/myLocal&amp;utm_campaign=Badge_Grade)
 
 myLocal is a Vagrant configuration designed and built for developing with WordPress on a LEMP stack. 
@@ -81,6 +83,8 @@ On chrome you might get an error like this:
 - It will then tell  you the import was successful - you can close all prompts.
 - Restart browser.
 
+If successful, you will see this when working on your my.local.com site: 
+ ![Chrome SSL Successful](https://raw.githubusercontent.com/lloan/myLocal/images/chrome-ssl-successful.png)
 
 ## **Firefox** 
 On Firefox you might get an error like this: 
@@ -96,11 +100,11 @@ On Firefox you might get an error like this:
 - It will then ask you to locate the file you want to use.
 - Find the directory where you're storing the [ledkybCA.pem](https://raw.githubusercontent.com/lloan/myLocal/master/ssl/ledkybCA.pem) file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
 - Select ledkybCA.pem and click Open. 
-- A new prompt will show up. Make sure to check the box that reads **Trust this CA to identify websites**. 
+- A new prompt will show up. ![Firefox Certificate Manager](https://raw.githubusercontent.com/lloan/myLocal/images/certificate-manager-firefox.png) Make sure to check the box that reads **Trust this CA to identify websites**. 
 - Click OK and you're done. Restart your browser.
 
-
- 
+If successful, you will see this when working on your my.local.com site: 
+ ![Firefox SSL Successful](https://raw.githubusercontent.com/lloan/myLocal/images/firefox-ssl-successful.png)
 # **Troubleshooting**
 
 If you're having problems after running `vagrant up` trying provisioning your box again. To do so, you can run the following command: `vagrant up --provision` and it will try loading everything again.
