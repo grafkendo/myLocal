@@ -73,16 +73,31 @@ On chrome you might get an error like this:
 - Click on Import.
 - On the new prompt, click next.
 - It will then ask you to locate the file you want to use, click on Browse.
-- Find the directory where you're storing the ledkybCA.pem file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
+- Find the directory where you're storing the [ledkybCA.pem](https://raw.githubusercontent.com/lloan/myLocal/master/ssl/ledkybCA.pem) file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
 - Select ledkybCA.pem and click next.
 - Click on **Place all certificates** in the follow store and choose **Trusted Root Certification Authorities**
 - Click on next and finish
-- You will get a Security Warning 
+- You will get a Security Warning - click Yes. ![SSL Sceurity Warning](https://raw.githubusercontent.com/lloan/myLocal/images/security-warning.png)
+- It will then tell  you the import was successful - you can close all prompts.
+- Restart browser.
 
 
 ## **Firefox** 
 On Firefox you might get an error like this: 
 ![Firefox SSL Error](https://raw.githubusercontent.com/lloan/myLocal/images/not-secure-firefox.png)
+
+### **Install**
+
+- Open your Firefox browser options
+- Once the page loads, on the left hand sidebar, select **Privacy & Security**
+- Scroll down to the **Certificates** section and click on View Certificates.
+- Click on the **Authorities** tab.
+- Click on **Import**.
+- It will then ask you to locate the file you want to use.
+- Find the directory where you're storing the [ledkybCA.pem](https://raw.githubusercontent.com/lloan/myLocal/master/ssl/ledkybCA.pem) file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
+- Select ledkybCA.pem and click Open. 
+- A new prompt will show up. Make sure to check the box that reads **Trust this CA to identify websites**. 
+- Click OK and you're done. Restart your browser.
 
 
  
