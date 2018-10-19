@@ -87,7 +87,9 @@ On chrome you might get an error like this:
 - Select ledkybCA.pem and click next.
 - Click on **Place all certificates** in the follow store and choose **Trusted Root Certification Authorities**
 - Click on next and finish
-- You will get a Security Warning - click Yes. ![SSL Sceurity Warning](https://raw.githubusercontent.com/lloan/myLocal/images/security-warning.png)
+- You will get a Security Warning - click Yes.
+
+ ![SSL Sceurity Warning](https://raw.githubusercontent.com/lloan/myLocal/images/security-warning.png)
 - It will then tell  you the import was successful - you can close all prompts.
 - Restart browser.
 
@@ -108,7 +110,10 @@ On Firefox you might get an error like this:
 - It will then ask you to locate the file you want to use.
 - Find the directory where you're storing the [ledkybCA.pem](https://raw.githubusercontent.com/lloan/myLocal/master/ssl/ledkybCA.pem) file - make sure you've set the extension search to all, by default its set to X.509.cer/.crt - otherwise it will not show up in the file explorer.
 - Select ledkybCA.pem and click Open. 
-- A new prompt will show up. ![Firefox Certificate Manager](https://raw.githubusercontent.com/lloan/myLocal/images/certificate-manager-firefox.png) Make sure to check the box that reads **Trust this CA to identify websites**. 
+- A new prompt will show up. Make sure to check the box that reads **Trust this CA to identify websites**. 
+
+![Firefox Certificate Manager](https://raw.githubusercontent.com/lloan/myLocal/images/certificate-manager-firefox.png) 
+
 - Click OK and you're done. Restart your browser.
 
 If successful, you will see this when working on your my.local.com site: 
