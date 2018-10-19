@@ -8,6 +8,10 @@ check_plugins ["vagrant-hostsupdater", "vagrant-host-shell"]
  
 Vagrant.configure("2") do |config|
     config.vm.box = "lloan/myLocal"
+
+    # uncomment if you want to set the box version you want to download
+    # config.vm.box_version = "1.0.1"
+    
     config.vm.network "private_network", ip: "192.168.33.114"
     config.vm.network "forwarded_port", host_ip: "127.0.0.1", guest: 3306, host: 1122 
     config.vm.hostname = "my.local.com"
