@@ -1,8 +1,9 @@
 ![](https://raw.githubusercontent.com/lloan/myLocal/images/div.png)
-## **myLocal**
+# **myLocal**
+
+**myLocal** v1.0.1                              
 *LEMP Stack - WordPress Development*                             
 *Linux / NGINX / MySQL / PHP*
-
 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3422a613d7e44942b7da7290a77169dc)](https://www.codacy.com/app/lloanalas/myLocal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lloan/myLocal&amp;utm_campaign=Badge_Grade)
@@ -10,6 +11,9 @@
 myLocal is a Vagrant configuration designed and built for developing with WordPress on a LEMP stack. 
 
 *It's simple, fast and efficient.*
+
+**[preview](https://raw.githubusercontent.com/lloan/myLocal/images/box_preview.png) :**
+![](https://raw.githubusercontent.com/lloan/myLocal/images/box_preview.png)
 
 # **Getting Started**
 Make sure all dependencies below are met. If you get stuck or face any errors while installing myLocal, you are more than welcomed to open issues in this repository. 
