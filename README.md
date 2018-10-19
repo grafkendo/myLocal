@@ -12,11 +12,61 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
 
 *It's simple, fast and efficient.*
 
-**[preview](https://raw.githubusercontent.com/lloan/myLocal/images/box_preview.png) :**
+----
+
+## **Table of Contents**
+
+  * [**What's Inside?**](#preview)  
+  * [**Getting Started**](#getting-started)
+    * [Prerequisites](#prerequisites)
+         * [Virtual Box](#install-virtualbox)
+         * [Vagrant](#install-vagrant)
+         * [Testing](#install-testing)
+  * [**Installation**](#installation)
+    * [Manual Box Installation](#installation-manual) 
+  * [**SSL**](#ssl)
+    * [Chrome](#ssl-chrome)
+    * [Firefox](#ssl-firefox)
+  * [**Troubleshooting**](#troubleshooting)  
+  * [**License**](#license) 
+    * [Acknowledgements](#acknowledgements) 
+
+
+
+----
+
+## **What's Inside?**         
+
 ![](https://raw.githubusercontent.com/lloan/myLocal/images/box_preview.png)
+<a name="preview"></a>
+
+### **Main Configuration** 
+
+|   |   |   |
+|---|---|---| 
+| Ubuntu 18.04 LTS (Bionic Beaver)  | Python 2.7  | Git    
+| NGINX 1.14.0  | Ruby 2.4  | Curl   
+| PHP 7.28   | Nano / Vi (command line editors)  | Glances 2.11.1 - System Health Checker  
+| MySQL 5.7.23  | MongoDB 4.0.3  |  Redis 4.0.11
+  
+### **Extras**   
+| | | | |
+|---|---|---|---|
+| Composer 1.7.2 | PHPUnit 7.3.1 |  xDebug 2.6.1 | WP-CLI 2.0.0 | 
+| Memcached 1.5.6 | NodeJS 10.9.0 | NPM 6.4.1 | Yarn 1.10.1 |   
+
+### **Global NPM Packages**   
+| | | | |
+|---|---|---|---|
+| grunt@1.0.3 | bower@1.8.4 | gulp@3.9.1 | yo@2.0.5 | 
+| browser-sync@2.26.3 | browserify@16.2.3 | pm2@3.2.2 | webpack@4.20.2 | 
+
+WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with caching which can be turned off by modifying the nginx configuration file for the default site. We recommend you install [Nginx helper plugin](https://wordpress.org/extend/plugins/nginx-helper/). Why is caching turned on for development? We deal a lot with caching and issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.  
+
 
 # **Getting Started**
-Make sure all dependencies below are met. If you get stuck or face any errors while installing myLocal, you are more than welcomed to open issues in this repository. 
+Make sure all dependencies below are met. If you get stuck or face any errors while installing myLocal, you are more than welcomed to open issues in this repository. Once everything is installed, you can visit your development environment by going to https://my.local.com **OR** 192.168.33.114. 
+<a name="getting-started"></a>
 
 ## **Prerequisites**
 Below are links to software required to run this project. These are required to create a virtual machine and load this configuration. myLocal will load all other required software in to your virtual machine, including the operating system, software and WordPress install.  
@@ -26,20 +76,28 @@ Below are links to software required to run this project. These are required to 
 - [Vagrant](https://www.vagrantup.com/downloads.html) by Hashicorp - Supports Windows, OS X, Linux
 - Git   
 
+<a name="prerequisites"></a>
+
 ### **Virtual Box** 
 Virtual Box is the software that runs the virtual machine you'll need to run myLocal. You can download it from virtualbox.org, [here](https://www.virtualbox.org/wiki/Downloads). Install the platform package for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
+
+<a name="install-virtualbox"></a>
 
 ### **Vagrant**
  Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  You can download it from vagrantup.com, [here](https://www.vagrantup.com/downloads.html). Install the version for your operating system.
 
 **Windows Note**: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
 
+<a name="install-vagrant"></a>
+
 ### **Testing**
 To test if **Git** is installed, run the following command in your preferred terminal: `git --version`. If successful, you will get something that looks like this: `git version 2.18.0.windows.1` or you can check if you have the Git Bash application installed. 
 
 To test if **Vagrant** is installed, run the following command in your terminal: `vagrant --version` and you should get something like `Vagrant 2.1.1`.
 
-## **Installation**
+<a name="install-testing"></a>
+
+# **Installation**
 These instructions assume you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation.
 
 1. Clone this project to your machine: `git clone https://github.com/lloan/myLocal.git` 
@@ -50,6 +108,8 @@ These instructions assume you've downloaded and installed Git, Virtual Box and V
 Once the box is running, you can visit the following pages for more information:
 - Box Page: https://my.local.com/box.php - all information regarding your box.
 - Server Info Page: https://my.local.com/info.php - all server information.
+
+<a name="installation"></a>
 
 ### **Manual Box Installation**
 If you find that the download from the Vagrant Cloud is taking too long, you can add the base box manually. You can download it from the `/package` branch OR you can just click [here](https://github.com/lloan/myLocal/raw/package/package.box).
@@ -65,6 +125,8 @@ If you find that the download from the Vagrant Cloud is taking too long, you can
 - Navigate to your project directory.
 - Run `vagrant up` 
 
+<a name="installation-manual"></a>
+
 # **SSL**
 In order to get your local SSL certifcate working, we've included the required certificate for you to add to your local machine or your browser. We have instructions below to get this working on Chrome & Firefox. 
  
@@ -74,7 +136,7 @@ On chrome you might get an error like this:
 ![Chrome SSL Error](https://raw.githubusercontent.com/lloan/myLocal/images/not-secure-chrome.png)
 
 ### **Install**
-
+<a name="ssl-chrome"></a>
 - Open your Chrome browser settings.
 - Scroll down and click on Advanced.
 - Find the Privacy and Security settings.
@@ -101,7 +163,7 @@ On Firefox you might get an error like this:
 ![Firefox SSL Error](https://raw.githubusercontent.com/lloan/myLocal/images/not-secure-firefox.png)
 
 ### **Install**
-
+<a name="ssl-firefox"></a>
 - Open your Firefox browser options
 - Once the page loads, on the left hand sidebar, select **Privacy & Security**
 - Scroll down to the **Certificates** section and click on View Certificates.
@@ -118,8 +180,9 @@ On Firefox you might get an error like this:
 
 If successful, you will see this when working on your my.local.com site: 
  ![Firefox SSL Successful](https://raw.githubusercontent.com/lloan/myLocal/images/firefox-ssl-successful.png)
-# **Troubleshooting**
 
+# **Troubleshooting**
+<a name="troubleshooting"></a>
 If you're having problems after running `vagrant up` trying provisioning your box again. To do so, you can run the following command: `vagrant up --provision` and it will try loading everything again.
 
 Some useful vagrant commands:
@@ -141,7 +204,9 @@ Some useful vagrant commands:
 
 # **License**
 This project is licensed under the MIT License - see the LICENSE.md file for details
+<a name="license"></a>
 
 ## **Acknowledgements** 
 - Dependency Manager developed by Dev_NIX
 - Inspired by Scotch Box developed by whatnickcodes
+<a name="acknowledgements"></a>
