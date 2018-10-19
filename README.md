@@ -186,6 +186,10 @@ If successful, you will see this when working on your my.local.com site:
 <a name="troubleshooting"></a>
 If you're having problems after running `vagrant up` trying provisioning your box again. To do so, you can run the following command: `vagrant up --provision` and it will try loading everything again.
 
+## Vagrant Box Version
+To change the version of the myLocal box your vagrantfile is using, find this line of code and uncomment it: `config.vm.box_version = "1.0.1"` - replace `1.0.1` with the version you want to use, otherwise, while commented out, it will download the latest version the first time around. Every time the box is updated, it will let you know and give you the option to update. 
+
+## Vagrant Commands
 Some useful vagrant commands:
 - `vagrant up`- starts up your vagrant machine, adding the `--provision` flag makes Vagrant run all of our provisioners (shell script and so on). 
 
