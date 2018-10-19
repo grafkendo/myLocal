@@ -24,6 +24,7 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
          * [Testing](#install-testing)
   * [**Installation**](#installation)
     * [Manual Box Installation](#installation-manual) 
+  * [**Caching**](#caching)  
   * [**SSL**](#ssl)
     * [Chrome](#ssl-chrome)
     * [Firefox](#ssl-firefox)
@@ -62,7 +63,7 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
 | grunt@1.0.3 | bower@1.8.4 | gulp@3.9.1 | yo@2.0.5 | 
 | browser-sync@2.26.3 | browserify@16.2.3 | pm2@3.2.2 | webpack@4.20.2 | 
 
-WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with caching which can be turned off by modifying the nginx configuration file for the default site. Why is caching turned on for development? We deal a lot with caching and issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.  
+WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with NGINX caching turned on. If you're logged in to WordPress, you bypass caching, if you want to test caching out, visit your development site in incognito/private mode. For more information regarding caching, click [here](#caching).
 
 
 # **Getting Started**
@@ -127,6 +128,26 @@ If you find that the download from the Vagrant Cloud is taking too long, you can
 - Run `vagrant up` 
 
 <a name="installation-manual"></a>
+
+# **Caching**
+Why is caching turned on in a development environment? We've ran in to a couple of issues where you don't realize that caching will affect new features. Caching is turned on by default through our NGINX configuration. However, below are examples of items **NOT** cached.
+
+## **Bypassed** 
+The following are not cache:
+- Dashboard `/wp-admin/`
+- POST requests
+- Requests with query parameters 
+- Logged in users
+- WP API requests - `|/wp-json/`
+- Sitemaps - `sitemap(_index)?.xml`
+- xmlrpc.php  
+
+## **Cached** 
+The following are cached if page is not in bypass list above:
+- Resources (.js, .css)
+- RSS and Atom feeds
+- Media (jpg, jpeg, gif, png, ico, cur, gz, svg, mp4, ogg, ogv, webm, htc)
+- Webfonts (ttf, ttc, otf, eot, woff, woff2)
 
 # **SSL**
 In order to get your local SSL certifcate working, we've included the required certificate for you to add to your local machine or your browser. We have instructions below to get this working on Chrome & Firefox. 
