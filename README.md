@@ -30,6 +30,7 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
   * [**Troubleshooting**](#troubleshooting)  
   * [**License**](#license) 
     * [Acknowledgements](#acknowledgements) 
+  * [**Backlog**](#backlog)  
 
 
 
@@ -61,7 +62,7 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
 | grunt@1.0.3 | bower@1.8.4 | gulp@3.9.1 | yo@2.0.5 | 
 | browser-sync@2.26.3 | browserify@16.2.3 | pm2@3.2.2 | webpack@4.20.2 | 
 
-WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with caching which can be turned off by modifying the nginx configuration file for the default site. We recommend you install [Nginx helper plugin](https://wordpress.org/extend/plugins/nginx-helper/). Why is caching turned on for development? We deal a lot with caching and issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.  
+WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with caching which can be turned off by modifying the nginx configuration file for the default site. Why is caching turned on for development? We deal a lot with caching and issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.  
 
 
 # **Getting Started**
@@ -201,7 +202,6 @@ Some useful vagrant commands:
 - `vagrant global-status` - shows you status for all vagrant instances currently running.
 
 
-
 # **License**
 This project is licensed under the MIT License - see the LICENSE.md file for details
 <a name="license"></a>
@@ -210,3 +210,12 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 - Dependency Manager developed by Dev_NIX
 - Inspired by Scotch Box developed by whatnickcodes
 <a name="acknowledgements"></a>
+
+# **Contribute**
+If you want to contribute, please take a look at any open issues or our backlog below. If you have any enhancements or edits, please submit a pull request for review. We appreciate all the help we can get.
+
+## **Backlog**
+- Automation of additional module installation based on user configuration
+- Deployment method from dev to production 
+- Server switcher NGINX/Apache
+- Easy NGINX cache purging
