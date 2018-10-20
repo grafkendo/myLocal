@@ -8,9 +8,11 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3422a613d7e44942b7da7290a77169dc)](https://www.codacy.com/app/lloanalas/myLocal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lloan/myLocal&amp;utm_campaign=Badge_Grade)
 
-myLocal is a Vagrant configuration designed and built for developing with WordPress on a LEMP stack. 
+**myLocal**  is a Vagrant configuration designed and built for developing with WordPress on a LEMP stack. 
 
-*It's simple, fast and efficient.*
+<!-- added the a to make this a more complete sentence -->
+
+*It's a simple, fast and efficient.*
 
 ----
 
@@ -62,17 +64,35 @@ myLocal is a Vagrant configuration designed and built for developing with WordPr
 | grunt@1.0.3 | bower@1.8.4 | gulp@3.9.1 | yo@2.0.5 | 
 | browser-sync@2.26.3 | browserify@16.2.3 | pm2@3.2.2 | webpack@4.20.2 | 
 
-WordPress comes pre-installed out of the box, but lets you finish the installation wizard so you can set up the administrator account information. Environment comes with caching which can be turned off by modifying the nginx configuration file for the default site. Why is caching turned on for development? We deal a lot with caching and issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.  
+WordPress comes pre-installed out of the box, but it lets you finish the installation wizard so you can set up the administrator account information. 
+
+The environment comes with caching turned on for development purpose,
+It can be turned off by modifying the nginx configuration file for the default site. 
+
+#### Why is caching turned on for development?
+
+<!-- We deal a lot with caching issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.   -->
+
+There can be many caching issues that come up that you would not see if caching turned off. 
 
 
 # **Getting Started**
-Make sure all dependencies below are met. If you get stuck or face any errors while installing myLocal, you are more than welcomed to open issues in this repository. Once everything is installed, you can visit your development environment by going to https://my.local.com **OR** 192.168.33.114. 
+Make sure all dependencies below are met. 
+
+If you get stuck or face any errors while installing myLocal, you are more than welcomed to open issues in this repository. 
+
+<!-- instrution or how to open a GIT issues needed here -->
+Once everything is installed, you can visit your development environment by going to https://my.local.com **OR** 192.168.33.114. 
 <a name="getting-started"></a>
 
 ## **Prerequisites**
-Below are links to software required to run this project. These are required to create a virtual machine and load this configuration. myLocal will load all other required software in to your virtual machine, including the operating system, software and WordPress install.  
+Below are links to software required to run this project. 
 
-***Note:*** *Make sure to restart your computer after installing all prerequisites.*
+These are required to create a virtual machine and load this configuration. 
+
+**myLocal** will load all the other required software in to your virtual machine, including the operating system, software and WordPress installation.  
+
+***Note:*** *Make sure to restart your computer after installing all the prerequisites.*
 - [Virtual Box](https://www.virtualbox.org/wiki/Downloads) by Oracle - Supports Windows, OS X, Linux
 - [Vagrant](https://www.vagrantup.com/downloads.html) by Hashicorp - Supports Windows, OS X, Linux
 - Git   
@@ -80,31 +100,59 @@ Below are links to software required to run this project. These are required to 
 <a name="prerequisites"></a>
 
 ### **Virtual Box** 
-Virtual Box is the software that runs the virtual machine you'll need to run myLocal. You can download it from virtualbox.org, [here](https://www.virtualbox.org/wiki/Downloads). Install the platform package for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
+Virtual Box is the software that runs the virtual machine you'll need to run **myLocal**. 
+
+You can download it from virtualbox.org, [here](https://www.virtualbox.org/wiki/Downloads). Install the platform package for your operating system.  
+
+You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
 
 <a name="install-virtualbox"></a>
 
 ### **Vagrant**
- Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  You can download it from vagrantup.com, [here](https://www.vagrantup.com/downloads.html). Install the version for your operating system.
+ Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  
+ 
+ You can download it from vagrantup.com, [here](https://www.vagrantup.com/downloads.html). Install the version for your operating system.
+<!-- TODO:I Need to follow up with the windows installation gotcha's I had some issues with this when I did the shell section of the course -->
 
 **Windows Note**: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
 
 <a name="install-vagrant"></a>
 
 ### **Testing**
-To test if **Git** is installed, run the following command in your preferred terminal: `git --version`. If successful, you will get something that looks like this: `git version 2.18.0.windows.1` or you can check if you have the Git Bash application installed. 
+To test if **Git** is installed, you will need to run the following command in your preferred terminal: `git --version`. 
 
-To test if **Vagrant** is installed, run the following command in your terminal: `vagrant --version` and you should get something like `Vagrant 2.1.1`.
+If it is successful, you will get an output  that looks like this: 
+
+`git version 2.18.0.windows.1` 
+
+or you can check and see if you have the Git Bash application installed. 
+
+To test the  **Vagrant** installation, you will need to run the following command in your terminal: 
+`vagrant --version` 
+
+and you should get something like this
+
+`Vagrant 2.1.1`.
 
 <a name="install-testing"></a>
 
 # **Installation**
-These instructions assume you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation.
+These instructions assume you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation of **myLocal**.
+
+<!-- added **myLocal** to this to make sure that this is what you were refering to here in this paragraph -->
+
 
 1. Clone this project to your machine: `git clone https://github.com/lloan/myLocal.git` 
 2. Navigate to your project directory.
 3. Run the following command: `vagrant up`
-4. You will see some output, the first time you load this it will take a few minutes as it has to download the Vagrant Box from Vagrant Cloud. After that, whenever you bring your box back up, it will take under 2 minutes. You'll know it finished because it will open up a browser tab with `https://my.local.com/box.php` which has a ton of useful information. 
+4. You will see some output, the first time you load this it will take a few minutes as it has to download the Vagrant Box from Vagrant Cloud. After that, whenever you bring your box back up, it will take under 2 minutes. 
+
+<!-- You'll know  it finished because it will open up a browser tab with  -->
+
+When the installation is completed a browser tab will open 
+`https://my.local.com/box.php` 
+
+which has a ton of useful information. 
 
 Once the box is running, you can visit the following pages for more information:
 - Box Page: https://my.local.com/box.php - all information regarding your box.
