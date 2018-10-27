@@ -89,8 +89,8 @@ Once everything is installed, you can visit your development environment by goin
 Below are links to software required to run this project. 
 
 These are required to create a virtual machine and load this configuration. 
-
-**myLocal** will load all the other required software in to your virtual machine, including the operating system, software and WordPress installation.  
+<!-- made this more readable -->
+**myLocal** will load all the required software into your virtual machine, including the operating system, software and WordPress installation.  
 
 ***Note:*** *Make sure to restart your computer after installing all the prerequisites.*
 - [Virtual Box](https://www.virtualbox.org/wiki/Downloads) by Oracle - Supports Windows, OS X, Linux
@@ -100,9 +100,9 @@ These are required to create a virtual machine and load this configuration.
 <a name="prerequisites"></a>
 
 ### **Virtual Box** 
-Virtual Box is the software that runs the virtual machine you'll need to run **myLocal**. 
-
-You can download it from virtualbox.org, [here](https://www.virtualbox.org/wiki/Downloads). Install the platform package for your operating system.  
+Virtual Box is the software that runs the virtual machine that you will need need to run **myLocal**. 
+<!-- rewrote this and made the link more markdown readable -->
+You can download the software from [virtualbox](virtualbox.org). Install the platform package for your operating system.  
 
 You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
 
@@ -110,8 +110,8 @@ You do not need the extension pack or the SDK. You do not need to launch Virtual
 
 ### **Vagrant**
  Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  
- 
- You can download it from vagrantup.com, [here](https://www.vagrantup.com/downloads.html). Install the version for your operating system.
+ <!-- changed this for markdown readablity -->
+ You can download it from [Vagrant](https://www.vagrantup.com/downloads.html). Install the proper version for your operating system.
 <!-- TODO:I Need to follow up with the windows installation gotcha's I had some issues with this when I did the shell section of the course -->
 
 **Windows Note**: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
@@ -137,7 +137,7 @@ and you should get something like this
 <a name="install-testing"></a>
 
 # **Installation**
-These instructions assume you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation of **myLocal**.
+These instructions assume that you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation of **myLocal**.
 
 <!-- added **myLocal** to this to make sure that this is what you were refering to here in this paragraph -->
 
@@ -149,14 +149,15 @@ These instructions assume you've downloaded and installed Git, Virtual Box and V
 
 <!-- You'll know  it finished because it will open up a browser tab with  -->
 
-When the installation is completed a browser tab will open 
-`https://my.local.com/box.php` 
+<!-- made this more readable a to the -->
+When the installation is completed the browser the browser tab will open , containing  tons of useful information in regards to `https://my.local.com/box.php` .
 
-which has a ton of useful information. 
+ 
 
 Once the box is running, you can visit the following pages for more information:
-- Box Page: https://my.local.com/box.php - all information regarding your box.
-- Server Info Page: https://my.local.com/info.php - all server information.
+<!-- restyled this -->
+- **Box Page**: https://my.local.com/box.php - all information regarding your box will be located here 
+- **Server Info Page**: https://my.local.com/info.php - all server information will be located here
 
 <a name="installation"></a>
 
