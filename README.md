@@ -10,9 +10,7 @@
 
 **myLocal**  is a Vagrant configuration designed and built for developing with WordPress on a LEMP stack. 
 
-<!-- added the a to make this a more complete sentence -->
-
-*It's a simple, fast and efficient.*
+*It's simple, fast and efficient.*
 
 ----
 
@@ -66,14 +64,12 @@
 
 WordPress comes pre-installed out of the box, but it lets you finish the installation wizard so you can set up the administrator account information. 
 
-The environment comes with caching turned on for development purpose,
+The environment comes with caching turned on for development purposes,
 It can be turned off by modifying the nginx configuration file for the default site. 
 
-#### Why is caching turned on for development?
+#### Why is caching turned on for development? 
 
-<!-- We deal a lot with caching issues that come up while using it that you don't see with it turned off. This lets you develop with caching in mind.   -->
-
-There can be many caching issues that come up that you would not see if caching turned off. 
+There can be many caching issues that come up that you would not see if caching is turned off. 
 
 
 # **Getting Started**
@@ -89,8 +85,7 @@ Once everything is installed, you can visit your development environment by goin
 Below are links to software required to run this project. 
 
 These are required to create a virtual machine and load this configuration. 
-<!-- made this more readable -->
-**myLocal** will load all the required software into your virtual machine, including the operating system, software and WordPress installation.  
+ **myLocal** will load all the required software into your virtual machine, including the operating system, software and WordPress installation.  
 
 ***Note:*** *Make sure to restart your computer after installing all the prerequisites.*
 - [Virtual Box](https://www.virtualbox.org/wiki/Downloads) by Oracle - Supports Windows, OS X, Linux
@@ -101,7 +96,6 @@ These are required to create a virtual machine and load this configuration.
 
 ### **Virtual Box** 
 Virtual Box is the software that runs the virtual machine that you will need need to run **myLocal**. 
-<!-- rewrote this and made the link more markdown readable -->
 You can download the software from [virtualbox](virtualbox.org). Install the platform package for your operating system.  
 
 You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
@@ -109,10 +103,10 @@ You do not need the extension pack or the SDK. You do not need to launch Virtual
 <a name="install-virtualbox"></a>
 
 ### **Vagrant**
- Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  
- <!-- changed this for markdown readablity -->
- You can download it from [Vagrant](https://www.vagrantup.com/downloads.html). Install the proper version for your operating system.
-<!-- TODO:I Need to follow up with the windows installation gotcha's I had some issues with this when I did the shell section of the course -->
+Vagrant is the software that configures the virtual machine and lets you share files between your host computer and the virtual machine's filesystem.  
+
+You can download it from [Vagrant](https://www.vagrantup.com/downloads.html). Install the proper version for your operating system.
+
 
 **Windows Note**: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
 
@@ -139,23 +133,15 @@ and you should get something like this
 # **Installation**
 These instructions assume that you've downloaded and installed Git, Virtual Box and Vagrant. You can test that they're installed prior to installation of **myLocal**.
 
-<!-- added **myLocal** to this to make sure that this is what you were refering to here in this paragraph -->
-
-
 1. Clone this project to your machine: `git clone https://github.com/lloan/myLocal.git` 
 2. Navigate to your project directory.
 3. Run the following command: `vagrant up`
 4. You will see some output, the first time you load this it will take a few minutes as it has to download the Vagrant Box from Vagrant Cloud. After that, whenever you bring your box back up, it will take under 2 minutes. 
 
-<!-- You'll know  it finished because it will open up a browser tab with  -->
-
-<!-- made this more readable a to the -->
-When the installation is completed the browser the browser tab will open , containing  tons of useful information in regards to `https://my.local.com/box.php` .
-
- 
+When the installation is completed,a browser tab will open, containing tons of useful information in regards to `https://my.local.com/box.php`.
 
 Once the box is running, you can visit the following pages for more information:
-<!-- restyled this -->
+
 - **Box Page**: https://my.local.com/box.php - all information regarding your box will be located here 
 - **Server Info Page**: https://my.local.com/info.php - all server information will be located here
 
