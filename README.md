@@ -24,6 +24,7 @@
          * [Testing](#install-testing)
   * [**Installation**](#installation)
     * [Manual Box Installation](#installation-manual) 
+  * [**Caching**](#caching)  
   * [**SSL**](#ssl)
     * [Chrome](#ssl-chrome)
     * [Firefox](#ssl-firefox)
@@ -65,11 +66,13 @@
 WordPress comes pre-installed out of the box, but it lets you finish the installation wizard so you can set up the administrator account information. 
 
 The environment comes with caching turned on for development purposes,
-It can be turned off by modifying the nginx configuration file for the default site. 
+
+Caching can be turned off by modifying the nginx configuration file for the default site. 
 
 #### Why is caching turned on for development? 
 
 There can be many caching issues that come up that you would not see if caching is turned off. 
+
 
 
 # **Getting Started**
@@ -162,6 +165,26 @@ If you find that the download from the Vagrant Cloud is taking too long, you can
 - Run `vagrant up` 
 
 <a name="installation-manual"></a>
+
+# **Caching**
+Why is caching turned on in a development environment? We've ran in to a couple of issues where you don't realize that caching will affect new features. Caching is turned on by default through our NGINX configuration. However, below are examples of items **NOT** cached.
+
+## **Bypassed** 
+The following are not cache:
+- Dashboard `/wp-admin/`
+- POST requests
+- Requests with query parameters 
+- Logged in users
+- WP API requests - `|/wp-json/`
+- Sitemaps - `sitemap(_index)?.xml`
+- xmlrpc.php  
+
+## **Cached** 
+The following are cached if page is not in bypass list above:
+- Resources (.js, .css)
+- RSS and Atom feeds
+- Media (jpg, jpeg, gif, png, ico, cur, gz, svg, mp4, ogg, ogv, webm, htc)
+- Webfonts (ttf, ttc, otf, eot, woff, woff2)
 
 # **SSL**
 In order to get your local SSL certifcate working, we've included the required certificate for you to add to your local machine or your browser. We have instructions below to get this working on Chrome & Firefox. 
